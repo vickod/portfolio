@@ -9,7 +9,7 @@
     section{
         margin: 0 5%;
     }
-    .section-profile{
+    #profile{
         flex-direction: column;
         align-items: center;
         gap: 2rem;
