@@ -83,6 +83,18 @@
         opacity: 1;  
     }
 }
+@keyframes bottom-appearance {
+    from{
+        /* transform: scale(0); */
+        transform: translateY(200%);
+        opacity: 0;
+    }
+    to{
+        /* transform: scale(1); */
+        transform: translateY(0);
+        opacity: 1;  
+    }
+}
 @keyframes scale-appearance {
     from{
         transform: scale(0);
@@ -111,7 +123,20 @@ html{
 p{
     color: rgb(85,85,85);
 }
-
+.p1-title, .title{
+    text-align: center;
+    animation: scale-appearance linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
+}
+.p1-title{ 
+    font-weight: 600;
+}
+.title{
+    font-size: 3rem;
+    
+}
 /* Navigation */
 nav{
     display: flex;
@@ -168,7 +193,9 @@ nav{
     padding-right: 40px;
 }
 .hamburger-menu{
-    background-color: black;
+    /* background-color: #385170; */
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    /* opacity: 0.9; */
     position: fixed;
     width: 450px;
     max-width: 450px;
@@ -246,26 +273,26 @@ section{
     transition: all .5s ease;
 
     .img-profile{
-        height: 400px;
-        width: 400px;
+        height: 300px;
+        width: 300px;
         border-radius: 50%;
         object-fit: cover;
         object-position: 50% 0%;
         filter: grayscale(80%);
+        box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.3);
         /* animation: radius-image 20s ease-in-out infinite; */   
     }    
     p{  
         text-align: center;
         font-weight: 600;
     }
-    .p1-profile{
-        text-align: center;
-    }
-    .title-profile{
-        text-align: center;
+    /* .p1-title{
         font-size: 3rem;
-        
     }
+    .title{
+        font-size: 3rem;
+    } */
+    
     .p2-profile{  
         font-size: 1.75rem;
         margin-bottom: 1rem;
@@ -323,18 +350,6 @@ section{
 }
 /* About me */
 #about{ 
-      
-    .p1-about, .title-about{
-        animation: scale-appearance linear;
-        animation-timeline: view();
-        animation-range-start: cover 0% ;
-        animation-range-end: contain 50%;
-        text-align: center;
-    
-    }
-    .title-about{
-        font-size: 3rem;
-    }
     .container-about{
         display: flex;
         justify-content: center;
@@ -355,6 +370,7 @@ section{
             border-radius: 40px;
             filter: grayscale(80%);
             object-fit: cover;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             /* object-position: 50% 0%; */
         }
 
@@ -379,7 +395,8 @@ section{
             flex: 1;
             background: white;
             border-radius: 2rem;
-            border: rgb(53, 53, 53) 0.1rem solid;
+            /* border: rgb(53, 53, 53) 0.1rem solid; */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             border-color: rgb(163, 163, 163);
             text-align: center;
             /* min-width: 200px; */
@@ -393,3 +410,59 @@ section{
     }
 
 }
+
+/* skills */
+#skills{
+    display: flex;
+    flex-direction: column;
+    
+
+    .block-xp{
+        margin-top: 2rem;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+
+        .card-container-xp{
+            /* border: 1px solid black; */
+            border-radius: 2rem;
+            padding: 1.5rem;
+            flex: 1;
+            box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+           
+        }
+        .card1-container-xp{
+            animation: bottom-appearance linear;
+            animation-timeline: view();
+            animation-range-start: cover 0% ;
+            animation-range-end: contain 50%;
+        }
+        .card2-container-xp{
+            animation: right-appearance linear;
+            animation-timeline: view();
+            animation-range-start: cover 0% ;
+            animation-range-end: contain 50%;
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .article-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 3rem;
+        }
+        article{
+            display: flex;
+            flex: 1 1 50%;
+            
+            gap: 1rem;
+        }
+        
+    }
+    
+}
+
+

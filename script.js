@@ -24,3 +24,5 @@ btnCV.addEventListener("click", ()=> window.open('./assets/resume/cv.pdf'))
 linkedinLink.addEventListener("click", ()=> window.open('https://linkedin.com'))
 githubLink.addEventListener("click", ()=> window.open('https://github.com'))
 btnContactProfile.addEventListener("click", ()=> location.href='#contact')
+
+
